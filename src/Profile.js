@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, Pressable, Alert } from "react-native";
 import React from "react";
 import ProfilePic from "../assets/images/pfp.png";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -22,38 +22,76 @@ const Profile = () => {
         </Text>
       </Text>
       <View style={{ marginTop: 50 }}>
-        <Text
+        <Pressable
+          onPress={() => Alert.alert("View and Edit My Information")}
           style={{
-            fontSize: 16,
             marginTop: 20,
+            flexDirection: 'row'
           }}
         >
-          <Ionicons name="pencil" size={20} /> View and Edit My Information
-        </Text>
-        <Text
+          <Ionicons name="pencil" size={20} />
+          <Text
+            style={{
+              fontSize: 16,
+              marginLeft: 8
+            }}
+          >
+            View and Edit My Information
+          </Text>
+        </Pressable>
+
+        <View
+          onPress={() => Alert.alert(" Change App Preferences")}
+
           style={{
-            fontSize: 16,
             marginTop: 20,
+            flexDirection: 'row'
           }}
         >
-          <Ionicons name="options-outline" size={20} /> Change App Preferences
-        </Text>
-        <Text
+          <Ionicons name="options-outline" size={20} />
+          <Text
+            style={{
+              fontSize: 16,
+              marginLeft: 8
+            }}
+          >
+            Change App Preferences
+          </Text>
+        </View>
+
+        <View
           style={{
-            fontSize: 16,
             marginTop: 20,
+            flexDirection: 'row'
           }}
         >
-          <Ionicons name="chatbox-ellipses-outline" size={20} /> Submit Feedback
-        </Text>
-        <Text
+          <Ionicons name="chatbox-ellipses-outline" size={20} />
+          <Text
+            style={{
+              fontSize: 16,
+              marginLeft: 8
+            }}
+          >
+            Submit Feedback
+          </Text>
+        </View>
+
+        <View
           style={{
-            fontSize: 16,
             marginTop: 20,
+            flexDirection: 'row'
           }}
         >
-          <Ionicons name="bug-outline" size={20} /> Report a bug
-        </Text>
+          <Ionicons name="bug-outline" size={20} />
+          <Text
+            style={{
+              fontSize: 16,
+              marginLeft: 8
+            }}
+          >
+            Report a bug
+          </Text>
+        </View>
       </View>
     </View>
   );
