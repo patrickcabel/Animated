@@ -40,9 +40,8 @@ const Profile = () => {
           </Text>
         </Pressable>
 
-        <View
+        <Pressable
           onPress={() => Alert.alert(" Change App Preferences")}
-
           style={{
             marginTop: 20,
             flexDirection: 'row'
@@ -57,7 +56,7 @@ const Profile = () => {
           >
             Change App Preferences
           </Text>
-        </View>
+        </Pressable>
 
         <View
           style={{
