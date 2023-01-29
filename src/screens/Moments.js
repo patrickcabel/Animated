@@ -2,7 +2,7 @@ import { View, Text, Pressable, Image, StyleSheet } from "react-native";
 import React, { useState } from "react";
 import InstaStory from "react-native-insta-story";
 
-const Story = () => {
+const Moments = () => {
   const data = [
     {
       user_id: 1,
@@ -147,7 +147,7 @@ const Story = () => {
   );
 };
 
-export default Story;
+export default Moments;
 
 const styles = StyleSheet.create({
   container: {

@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet, FlatList, Animated } from "react-native";
 import React, { useState, useRef } from "react";
 
-import HomeItems from "../src/HomeItems";
-import slides from "../slides.js";
+import HomeItems from "../src/screens/HomeItems";
+import slides from "./slides.js";
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollX = useRef(new Animated.Value(0)).current;

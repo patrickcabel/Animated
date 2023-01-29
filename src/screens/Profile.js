@@ -1,9 +1,9 @@
 import { View, Text, Image, StyleSheet, Pressable, Alert } from "react-native";
 import React from "react";
-import ProfilePic from "../assets/images/pfp.png";
+import ProfilePic from "../images/pfp.png";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-const Profile = () => {
+const Profile = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>
@@ -23,17 +23,17 @@ const Profile = () => {
       </Text>
       <View style={{ marginTop: 50 }}>
         <Pressable
-          onPress={() => Alert.alert("View and Edit My Information")}
+          onPress={() => navigation.navigate("editProfile")}
           style={{
             marginTop: 20,
-            flexDirection: 'row'
+            flexDirection: "row",
           }}
         >
           <Ionicons name="pencil" size={20} />
           <Text
             style={{
-              fontSize: 16,
-              marginLeft: 8
+              fontSize: 20,
+              marginLeft: 8,
             }}
           >
             View and Edit My Information
@@ -44,14 +44,14 @@ const Profile = () => {
           onPress={() => Alert.alert(" Change App Preferences")}
           style={{
             marginTop: 20,
-            flexDirection: 'row'
+            flexDirection: "row",
           }}
         >
           <Ionicons name="options-outline" size={20} />
           <Text
             style={{
-              fontSize: 16,
-              marginLeft: 8
+              fontSize: 20,
+              marginLeft: 8,
             }}
           >
             Change App Preferences
@@ -61,14 +61,14 @@ const Profile = () => {
         <View
           style={{
             marginTop: 20,
-            flexDirection: 'row'
+            flexDirection: "row",
           }}
         >
           <Ionicons name="chatbox-ellipses-outline" size={20} />
           <Text
             style={{
-              fontSize: 16,
-              marginLeft: 8
+              fontSize: 20,
+              marginLeft: 8,
             }}
           >
             Submit Feedback
@@ -78,14 +78,14 @@ const Profile = () => {
         <View
           style={{
             marginTop: 20,
-            flexDirection: 'row'
+            flexDirection: "row",
           }}
         >
           <Ionicons name="bug-outline" size={20} />
           <Text
             style={{
-              fontSize: 16,
-              marginLeft: 8
+              fontSize: 20,
+              marginLeft: 8,
             }}
           >
             Report a bug
@@ -101,8 +101,8 @@ export default Profile;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     marginTop: 80,
+    marginLeft: 30,
   },
   profileIcon: {
     width: 50,
