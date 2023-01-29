@@ -7,6 +7,7 @@ import {
   ScrollView,
   Pressable,
   StyleSheet,
+  SafeAreaView,
 } from "react-native";
 import React, { useState } from "react";
 import InstaStory from "react-native-insta-story";
@@ -20,7 +21,7 @@ import { data, postInfo } from '../@db/moments'
 const Moments = () => {
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <InstaStory
         data={data}
         duration={10}
@@ -180,7 +181,7 @@ const Moments = () => {
           })}
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 

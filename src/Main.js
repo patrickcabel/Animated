@@ -57,6 +57,7 @@ const Main = ({ navigation }) => {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="albums-outline" size={30} />
           ),
+          headerShown: false
         }}
         name="Moments"
         component={Moments}
